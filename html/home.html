@@ -1,0 +1,768 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        -Primary meta tags
+     -->
+     <meta name="title" content="ClimaGRaphix">
+     <meta name="description" content="Her you can check the weather">
+    <title>ClimaGraphix</title>
+
+    <!-- 
+        -Favicon
+     -->
+     <link rel="shortcut icon" href="/images/icons/Color=On.svg">
+
+    <!-- 
+        -Link font family from google fonts
+     -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- 
+        -Link icons from fontawesome
+     -->
+     <script src="https://kit.fontawesome.com/9d11fa2da3.js" crossorigin="anonymous"></script>
+
+     <!-- 
+        -Link stylesheet
+      -->
+     <link rel="stylesheet" href="../css/home.css">
+
+</head>
+<body>
+
+<!-- 
+    -NAVBAR
+ -->
+    <nav>
+            <a href="./home.html" class="logo">
+                <p>Clima<span>Graphix</span></p>
+            </a>
+            <div class= "icons">
+                
+                <div class="icons-item">
+                    <div class="notification">
+                        <img src="/images/icons/Notification bell.svg" alt="Notification">
+                    </div>
+                    <div class="user">
+                        <img src="/images/icons/user.svg">
+                    </div>
+                    <div class="customize">
+                        <div class="language">
+                            <img src="/images/icons/Union.svg" alt="">
+                            <p>En</p>
+                        </div>
+                        <span></span>
+                        <p>°C</p>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <div class="mob-tab-links">
+
+                <ul class="icons-link">
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <img src="/images/icons/Haruki Icons.png">
+                            <p>
+                                Dashboard
+                            </p>
+                        </a> 
+                    </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <img src="/images/icons/Location.svg">
+                            <p>
+                                My location
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <img src="/images/icons/sun.png">
+                            <p>
+                                Sun condition
+                            </p>
+                        </a>
+                        </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <img src="/images/icons/calendar.svg">
+                            <p>
+                                Calender
+                            </p>
+                        </a>
+                        </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <img src="/images/icons/Bookmark.svg">
+                            <p>
+                                Saved location
+                            </p>
+                        </a>
+                        </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <img src="/images/icons/Historique.svg">
+                            <p>
+                                History
+                            </p>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <img src="/images/icons/wifi-off-line.svg">
+                            <p>
+                                Offline
+                            </p>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                            <p>
+                                Beach condition
+                            </p>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <i class="fa-solid fa-fish"></i>
+                            <p>
+                                Fishing
+                            </p>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <img src="/images/icons//02.svg" alt="">
+                            <p>
+                                Share
+                            </p>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <i class="fa-regular fa-user"></i>
+                            <p>
+                                User
+                            </p>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="tab">
+                            <img src="/images/icons/settings.svg" alt="">
+                            <p>
+                                Settings
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="links">
+                    <li class="link">
+                        <a href= "#">
+                        Current weather
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href= "#">
+                            Hourly
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href= "#">
+                            Extended forecast
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href= "#">
+                            Monthly
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href= "#">
+                            Weekend
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href= "#">
+                            Location
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href= "#">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href= "#">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="search-bar">
+                <input type="search" name="search" id="search-bar" placeholder="Location/Zip code,day">
+                <img src="/images/icons/Vector.svg" alt="">
+            </form>
+    </nav>
+
+<!-- 
+    -DASHBOARD
+ -->
+    <section id="dashboard">
+
+        <div class="current-weather">
+            <div class="heading">
+                <h1>Current Weather</h1>
+                <div class="subheading">
+                    <i class="fa-solid fa-location-dot" style="color: #ededed;"></i>
+                    <div>
+                        <p class="location">FCT,Nigeria</p>
+                        <span class="line"></span>
+                        <p class="time">3:03</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="temperature">
+                <div class="weather-icon">
+                    <img src="/images/Weather icon/WeatherIcon - 1-70.svg" >
+                </div>
+                <div class="temp-desc">
+                    <div class="temp">
+                        <h2 >28</h2>
+                        <p>°C </p>
+                    </div>
+                    <p class="desc">
+                        Cloudy
+                        <span>Feels like rain this afternoon</span>
+                    </p>
+                </div>
+            </div>
+            
+            <ul class="weather-condition">
+                <li class="left">
+                    <p>Wind Speed<span>2km/h</span></p>
+                </li>
+
+                <li class="right">
+                    <p>Air Pressure<span>1009.457PS</span></p>
+                </li>
+
+                <li class="left">
+                    <p>Sunrise<span>06:30</span></p>
+                </li>
+
+                <li class="medal">
+                    <p>DayLight<span>13h40min</span></p>
+                </li>
+
+                <li class="right">
+                    <p>Sunset<span>20:10</span></p>
+                </li>
+                
+                <li class="left">
+                    <p>Humidity<span>20%</span></p>
+                </li>
+
+                <li class="right">
+                    <p>Air-Quality<span>Good-30%</span></p>
+                </li>
+
+            </ul>
+        </div>
+        
+        <div class="hourly-forecast">
+            <h3>Hourly forecast</h3>
+            
+            <div class="hourly">
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-10.svg">
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            Now
+                            <spam>35°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                        11:30
+                        <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="hour">
+                    <div class="hour-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-11.svg" >
+                    </div>
+                    <div class="h-temp">
+                        <p>
+                            11:30
+                            <spam>23°</spam>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+    <div class="day-forecast">
+        <h3>10 Day forecast</h3>
+        <div class="days">
+            <div class="day">
+                <h5>Today</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/weather icon/WeatherIcon - 1-23.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <h5>Monday</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-28.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h5>Tuesday</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-28.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h5>Tuesday</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-28.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h5>Tuesday</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-28.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h5>Tuesday</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-28.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h5>Tuesday</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-28.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h5>Tuesday</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-28.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h5>Tuesday</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-28.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h5>Tuesday</h5>
+                <div class="descri">
+                    <div class="day-icon">
+                        <img src="/images/Weather icon/WeatherIcon - 1-28.svg">
+                        <p>Sunny<span>Feels good</span></p>
+                    </div>
+                    <div class="tempe">
+                        <h4>45°</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="radar-map"></div>
+</section>
+
+<!-- 
+    -Sidebar
+ -->
+<section id="sidebar">
+    <ul>
+        <li>
+            <div class="sid-icon">
+                <img src="/images/weather icon/WeatherIcon - 1-15.svg">
+            </div>
+            <div class="sid-location">
+                My location
+            </div>
+        </li>
+        <li>
+            <div class="sid-icon">
+                <img src="/images/weather icon/Ellipse 1.svg">
+            </div>
+            <div class="sid-location">
+                Los Angeles, CA
+            </div>
+        </li>
+        <li>
+            <div class="sid-icon">
+                <img src="/images/Weather icon/WeatherIcon - 1-16.svg">
+            </div>
+            <div class="sid-location">
+                Washington, DC
+            </div>
+        </li>
+        <li>
+            <div class="sid-icon">
+                <img src="/images/Weather icon/WeatherIcon - 1-16.svg">
+            </div>
+            <div class="sid-location">
+                Lagos, LAG
+            </div>
+        </li>
+        <li>
+            <div class="sid-icon">
+                <img src="/images/Weather icon/WeatherIcon - 1-16.svg">
+            </div>
+            <div class="sid-location">
+                Washington, DC
+            </div>
+        </li>
+    </ul>
+</section>
+    
+<!-- 
+    -Link the script file
+ -->
+ <script src="../js/home.js"></script>
+</body>
+</html>
