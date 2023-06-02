@@ -127,6 +127,7 @@ window.addEventListener('load', breakDiv);
 const searchBar = document.querySelector('.search-bar');
 
 // Call remove the links function that eexist in the MENU section for Close the menu links when the user click some were in the body items
+
 [section, sideBar, searchBar].forEach(item => {
     item.addEventListener('click', removeTheLinks);
 });
