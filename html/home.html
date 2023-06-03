@@ -268,10 +268,12 @@
                     <p>Sunrise<span>06:30</span></p>
                 </li>
                 
-                <li class="medal">
+                <li class="day-light">
                     <div class="medal-icon-container">
                         <hr>
-                        <img src="/images/weather icon/Ellipse 1.svg" alt="">
+                        <div>
+                            <img src="/images/weather icon/Ellipse 1.svg" alt="">
+                        </div>
                         <hr>
                     </div>
                     <p>DayLight<span>13h40min</span></p>
@@ -280,9 +282,15 @@
                 <li class="right">
                     <p>Sunset<span>20:10</span></p>
                 </li>
+
                 
                 <li class="left">
                     <p>Humidity<span>20%</span></p>
+                </li>
+                
+                <li class="input">
+                    <input type="range" name="degree" min="-36" max="126">
+                    <p>Value: <output id="value"></output></p>
                 </li>
 
                 <li class="right">

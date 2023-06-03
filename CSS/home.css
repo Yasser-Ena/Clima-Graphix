@@ -45,7 +45,10 @@
     /*=-Padding-=*/
     --Section-padding:   1rem;
     --Container-padding: 1rem;
-    
+
+/*==Random Property's==*/
+    --Degree : -36deg;
+    --Mines-degree: 0deg;
 }
 
 
@@ -443,28 +446,25 @@ input::placeholder{
         grid-column: 1/2;
     }
 
-    #dashboard .current-weather .weather-condition li.medal{
+    #dashboard .current-weather .weather-condition li.day-light{
         grid-column: 2/3;
-
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: .8rem; */
-        /* border: 1px solid; */
         position: relative;
+
+        /* border: 1px solid; */
+        width: 100%;
     }
 
     
-    #dashboard .current-weather .weather-condition li.medal .medal-icon-container{
-        width: 6rem;
-        aspect-ratio: 1/.5;
-        /* border: 1px solid firebrick; */
+    #dashboard .current-weather .weather-condition li.day-light .medal-icon-container{
+        width: 100%;
+        aspect-ratio: 2/1;
+        margin-inline: auto;
 
         position: relative;
         overflow: hidden;
     }
 
-    #dashboard .current-weather .weather-condition li.medal .medal-icon-container hr:nth-child(1){
+    #dashboard .current-weather .weather-condition li.day-light .medal-icon-container hr:nth-child(1){
         width: 80%;
         aspect-ratio: 2/1;
         border-radius: 50%/ 100% 100% 0 0;
@@ -476,51 +476,84 @@ input::placeholder{
         transform: translate(-50%, -36%);
     }
 
-    #dashboard .current-weather .weather-condition li.medal .medal-icon-container hr:nth-child(1){
-        z-index: -2;
-    }
-
-    #dashboard .current-weather .weather-condition li.medal .medal-icon-container hr:nth-child(3){
+    #dashboard .current-weather .weather-condition li.day-light .medal-icon-container hr:nth-child(3){
         width: 80%;
         aspect-ratio: 1/1;
-        border-top: 1px solid #dedede;
+        border-bottom: 1px solid #dedede;
         border-left: 1px solid #DEDEDE;
-        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
         border-right: 1px solid transparent;
         border-radius: 50%;
-        background: conic-gradient(from .63turn, #dededed8, #dedede11 50%, transparent 50%, transparent);
+        background: conic-gradient(from .37turn, #dededed8, #dedede11 50%, transparent 50%, transparent);
 
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -18%) rotate(43deg);
+        transform: translate(-50%, -18%) rotate(var(--Degree));
+
         z-index: -1;
     }
     
-    #dashboard .current-weather .weather-condition li.medal .medal-icon-container img{
+    #dashboard .current-weather .weather-condition li.day-light .medal-icon-container div{
+        width: 80%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background: transparent;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -18%) rotate(var(--Degree));
+    }
+
+    #dashboard .current-weather .weather-condition li.day-light .medal-icon-container img{
         width: 20%;
         aspect-ratio: 1/1;
+
+        position: absolute;
+        top: 6%;
+        left: 6%;
+        transform: rotate(var(--Mines-degree));
+    }
+
+    #dashboard .current-weather .weather-condition li.day-light p{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -120%);
+        transform: translate(-50%, -6%);
     }
 
-    #dashboard .current-weather .weather-condition li.medal p{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -10%);
+    /* styling the range that controls the sun position and all the element related to her */
+    #dashboard .current-weather .weather-condition li.input{
+        grid-column: 2/3;
+        justify-self: center;
+
+        width: 90%;
+        border: 1px solid gainsboro;
+        border-radius: 1rem;
+        padding-block: .4rem;
     }
 
-    #dashboard .current-weather .weather-condition li.right{
-        grid-column: 3/4;
+
+#dashboard .current-weather .weather-condition li.input [type = "range"]{width: 100%;}
+
+/* #dashboard .current-weather .weather-condition li.input [type=”range”]::-webkit-slider-runnable-track
+#dashboard .current-weather .weather-condition li.input [type=”range”]::-moz-range-track, 
+#dashboard .current-weather .weather-condition li.input [type=”range”]::-ms-track{
+{
+      color: rgb(230, 173, 225);
+} */
+
+    #dashboard .current-weather .weather-condition li.input p{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
+
+    #dashboard .current-weather .weather-condition li.right{grid-column: 3/4;}
 
     #dashboard .current-weather .weather-condition li:nth-child(1),
-    #dashboard .current-weather .weather-condition li:nth-child(2){
-        grid-row: 1/2;
-    }
+    #dashboard .current-weather .weather-condition li:nth-child(2){grid-row: 1/2;}
     
     #dashboard .current-weather .weather-condition li:nth-child(3),
     #dashboard .current-weather .weather-condition li:nth-child(4),
@@ -531,7 +564,8 @@ input::placeholder{
     }
     
     #dashboard .current-weather .weather-condition li:nth-child(6),
-    #dashboard .current-weather .weather-condition li:nth-child(7){
+    #dashboard .current-weather .weather-condition li:nth-child(7),
+    #dashboard .current-weather .weather-condition li.input{
         grid-row: 3/4
     }
     

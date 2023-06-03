@@ -133,4 +133,29 @@ const searchBar = document.querySelector('.search-bar');
 });
 
 
+
+/**
+ * DAYLIGHT
+ */
+
+//Element Variables
+const daylight           = document.querySelector('.day-light');
+const medalIconContainer = document.querySelector('.medal-icon-container');
+const imgContainer       = medalIconContainer.querySelector('div');
+const hrLast             = medalIconContainer.lastElementChild;
+const sunIcon            = imgContainer.querySelector('img');
+
+const input              = document.querySelector('[type = range]');
+const value              = document.querySelector('#value');
+
+// Turn the sun and all the element related to her in the same time using range input value when the range input is changed
+input.addEventListener('input', (e)=> {
+    value.value = " " + e.target.value + " " + "degree";
+
+    [hrLast, imgContainer].forEach(element => {
     
+        element.style.transform = "translate(-50%, -18%) rotate(" + e.target.value + "deg" + ")";
+        sunIcon.style.transform = "rotate( -" + e.target.value + "deg" + ")";
+    });
+
+});
