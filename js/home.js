@@ -77,8 +77,8 @@ function breakDiv(){
     icons.remove();
     
     body.appendChild(iconLinks);
-    // links.classList.add('mob-tab-links');
-}
+
+    }
 }
 
 
@@ -87,37 +87,38 @@ function breakDiv(){
 window.addEventListener('load', breakDiv);
 
 
-// Break the icons div to multiple element depend  on the with of the screen width
-// function breakDivDepend(){
+// to fix the menu issue when the screen is resized
+function reload(){
+    if(window.innerWidth >= 1200 && nav.querySelector('.icons ') !== null){
 
-//     if(windowWidth.matches && nav.hasChildNodes(icons)){
+        [menu, iconsItem].forEach(item=> {
+            icons.parentNode.appendChild(item);
+            // icons1.parentNode.appendChild(item);
+            item.style.display = "flex";
+        });
 
-//     [menu, iconsItem].forEach(item=> {
-//         icons.parentNode.appendChild(item);
-//         item.style.display = "flex";
-//     });
-
-//     icons.remove();
-
-//     }else if(!nav.hasChildNodes(icons)){
-//         console.log('hi');
-
-//         const iconsSec = document.createElement('div');
-//         iconsSec.classList.add('icons');
-//         nav.appendChild(iconsSec);
+        icons.remove();
+        // icons1.remove();
         
-        
-//         [menu, iconsItem].forEach(item=> {
-//             iconsSec.parentNode.appendChild(item);
-//             item.style.display = "flex";
-//         });
+        body.appendChild(iconLinks);
+
+    }else if(window.innerWidth < 1200 && nav.querySelector('.icons ') == null){
+        const icons1 = document.createElement('div');
+        icons1.classList.add('icons');
+        nav.appendChild(icons1);
+        console.log(icons1);
+
+        [menu, iconsItem].forEach(item=> {
+            icons1.appendChild(item);
+            item.style.display = "flex";
+        });
     
-//     }
-
-// }
-
+        
+        mobTabLinks.appendChild(iconLinks);
+    }
+}
 // Call breakDivDepend function when the page is loaded
-// window.addEventListener('resize', breakDivDepend);
+window.addEventListener('resize', reload);
 
 /**
  * MENU LINK's
@@ -133,6 +134,50 @@ const searchBar = document.querySelector('.search-bar');
 });
 
 
+/**
+ * SHOW LESS/MORE
+ */
+
+//Element Variables
+const currentWeather   = document.querySelector('.current-weather');
+const show             = document.querySelector('.show-sitting');
+const showP            = show.querySelector('p');
+const showI            = show.querySelector('i');
+const weatherCondition = document.querySelector('.weather-condition');
+
+// control the current weather tab
+function controlCurrentT(){
+
+    if(weatherCondition.style.display == 'none'){
+        
+        // undisplay the weather condition & change the text and also the icon
+        weatherCondition.style.display = "grid";
+        showP.innerText = "Show less";
+        showI.classList.replace('fa-angle-down', 'fa-angle-up');
+    }else{
+        
+        // display the weather condition & change the text and also the icon
+        weatherCondition.style.display = "none";
+        showP.innerText = "Show more";
+        showI.classList.replace('fa-angle-up', 'fa-angle-down');
+
+    }
+}
+
+function controlCurrentt(){
+
+    if(weatherCondition.style.display == 'none'){
+
+        // undisplay the weather condition & change the text and also the icon
+        weatherCondition.style.display = "grid";
+        showP.innerText = "Show less";
+        showI.classList.replace('fa-angle-down', 'fa-angle-up');
+    }
+}
+
+// call the controlCurrentT function when the show is clicked
+show.addEventListener('click', controlCurrentT);
+currentWeather.addEventListener('click', controlCurrentt);
 
 /**
  * DAYLIGHT

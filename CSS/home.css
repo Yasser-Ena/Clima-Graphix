@@ -18,8 +18,8 @@
 /*==Typography==*/
 
     /*=-FONT Size-=*/
-    --Extra-small: 10;
-    --Extra-small-thought’s: 10;
+    --Extra-small: 13;
+    --Extra-small-thought’s: 12;
     --Extra-small-accent: 10;
     --H1-sub: 12;
     --H2-sub: 14;
@@ -49,6 +49,10 @@
 /*==Random Property's==*/
     --Degree : -36deg;
     --Mines-degree: 0deg;
+
+    /* ::after */
+    --Image: url(/images/icons/Up.svg) no-repeat;
+    --Content: 'Show less';
 }
 
 
@@ -97,9 +101,9 @@ body{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     color: #ededed;
-    /* background: url(/images/imges/pexels-ruvim-3560044.jpg)center no-repeat; */
-    /* background-size: cover; */
-    background: darkcyan;
+    background: url(/images/imges/pexels-ruvim-3560044.jpg)center no-repeat;
+    background-size: cover;
+    /* background: darkcyan; */
 }
 
 ::-webkit-scrollbar{display: none;}
@@ -142,30 +146,31 @@ body{
 .weather-condition p span{font-size: var(--Extra-small-accent);}
 
 .weather-condition p span,
-.day-forecast .descri .day-icon p span{font-weight: var(--Extra-small-weight);}
+.day-forecast .day-icon p span{font-weight: var(--Extra-small-weight);}
 
 .hourly-forecast h3{font-size: var(--Medium-1-h3);}
 
 .weather-condition p,
-.hourly-forecast .h-temp p,
-.hourly-forecast .h-temp p span,
-.day-forecast .descri .day-icon p span{font-size: var(--Extra-small);}
+.day-forecast .day-icon span{font-size: var(--Extra-small);}
 
 
 .day-forecast h5{font-size: var(--Medium-1-h3);}
 
-.day-forecast .descri .day-icon p{font-size: var(--H3-sub);}
+.day-forecast .descri .day-icon p,
+.h-temp p{font-size: var(--H3-sub);}
 
-.day-forecast .descri .temp h4{font-weight: var(--Medium-2);}
+.h-temp p{font-size: var(--Search-bar);}
+
+#dashboard .day-forecast .days .day .descri .tempe h4{font-size: var(--Medium-2);}
 
 .temperature p.desc span,
 .weather-condition p,
-.day-forecast h5,
-.day-forecast .descri .temp h4{
+#dashboard .day-forecast .days .day .descri .tempe h4
+{
     font-weight: var(--The-400);
 }
 
-.hourly-forecast .h-temp p,
+.h-temp p
 .day-forecast .descri .day-icon p{
     font-weight: var(--The-600);
 }
@@ -175,7 +180,8 @@ body{
 .temperature p.desc,
 .heading h1,
 .hourly-forecast h3,
-.hourly-forecast .h-temp p span{font-weight: var(--The-700);}
+.day-forecast h5,
+.h-temp p span{font-weight: var(--The-700);}
 
 input,
 input::placeholder{
@@ -251,14 +257,17 @@ input::placeholder{
 
     nav .menu .line:nth-child(1).toggle{
         transform: rotateZ(135deg) translateY(-.48rem);
+        background: #000956;
     }
 
     nav .menu .line:nth-child(2).toggle{
         transform: translateX(100%) rotateZ(90deg);
+        background: #000956;
     }
 
     nav .menu .line:nth-child(3).toggle{
         transform: rotateZ(-135deg) translateY(.4rem);
+        background: #000956;
     }
 
     nav .icons-item .user,
@@ -301,12 +310,12 @@ input::placeholder{
         column-gap: .6rem;
         justify-content: space-between;
 
-        width: 100%;
+        min-width: 70%;
         max-width: 54%;
         border: var(--Background-Gray) .12rem solid;
         border-radius: 25rem;
         padding: .2rem .5rem;
-        box-shadow: .06rem .06rem .4rem .3rem hsla(240, 1%, 32%, 0.493);
+        box-shadow: .04rem .04rem .3rem .1rem rgba(160, 160, 160, 0.473);
 
     }
 
@@ -335,19 +344,21 @@ input::placeholder{
         grid-template-columns: repeat(8, 1fr);
         row-gap: 1rem;
         justify-self: center;
-        overflow: hidden;
-
+        /* overflow-x: hidden; */
+        
         padding: var(--Section-padding);
     }
 
+    /* styling the current weather tab */
+
     #dashboard .current-weather{
         grid-column: 1/9;
-        grid-row: 1/2;
+        grid-row: 2/3;
         justify-self: center;
 
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        row-gap: 1rem;
+        row-gap: 1.4rem;
 
         background:#9baca760;
         border-radius: 1rem;
@@ -355,6 +366,34 @@ input::placeholder{
         box-shadow: .04rem .04rem .3rem .1rem rgba(160, 160, 160, 0.473);
         width: 100%;
         max-width: 28rem;
+
+        position: relative;
+    }
+
+    /* style show less and show more the current weather */
+
+    #dashboard  .show-sitting{
+        grid-column: 1/9;
+        grid-row: 1/2;
+        justify-self: center;
+
+        width: 100%;
+        max-width: 28rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        column-gap: .5rem;
+    }
+
+    #dashboard  .show-sitting p{
+        font-weight: var(--The-600);
+    
+    }
+
+    #dashboard  .show-sitting i{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
     }
 
     #dashboard .current-weather .heading{
@@ -434,13 +473,16 @@ input::placeholder{
         grid-row: 3/4;
         justify-self: center;
 
-
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        row-gap: .8rem;
+        row-gap: .02rem;
+
         width: 100%;
         max-width: 24rem;
+
+        position: relative;
     }
+
 
     #dashboard .current-weather .weather-condition li.left{
         grid-column: 1/2;
@@ -535,14 +577,7 @@ input::placeholder{
     }
 
 
-#dashboard .current-weather .weather-condition li.input [type = "range"]{width: 100%;}
-
-/* #dashboard .current-weather .weather-condition li.input [type=”range”]::-webkit-slider-runnable-track
-#dashboard .current-weather .weather-condition li.input [type=”range”]::-moz-range-track, 
-#dashboard .current-weather .weather-condition li.input [type=”range”]::-ms-track{
-{
-      color: rgb(230, 173, 225);
-} */
+    #dashboard .current-weather .weather-condition li.input [type = "range"]{width: 100%;}
 
     #dashboard .current-weather .weather-condition li.input p{
         display: flex;
@@ -575,17 +610,21 @@ input::placeholder{
         align-items: center;
     }
 
+    /* styling the hourly forecast tab */
 
     #dashboard .hourly-forecast{
         grid-column: 1/9;
-        grid-row: 2/3;
+        grid-row: 3/4;
+        justify-self: center;
 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         row-gap: 1rem;
-        overflow-x: hidden;
 
+
+        width: 100%;
+        max-width: 42rem;
         background:#9baca760;
         border-radius: 1rem;
         padding: var(--Container-padding);
@@ -596,23 +635,28 @@ input::placeholder{
         display: flex;
         column-gap: .5rem;
         flex-wrap: nowrap;
-        overflow-x: auto;
+        overflow-x: scroll;
+
+        width: 100%;
     }
-    
+
     #dashboard .hourly-forecast .hourly .hour{
         flex: 0 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: .4rem;
+        row-gap: .2rem;
 
         background: #d9d9d994;
         border-radius: 1rem;
         padding: .5rem 1rem;
+        min-width: 6rem;
+        max-width: 10rem;
+        aspect-ratio: 1/1;
     }
 
     #dashboard .hourly-forecast .hourly .hour .hour-icon{
-        width: 2rem;
+        width: 2.6rem;
         aspect-ratio: 1/1;
     }
 
@@ -621,14 +665,88 @@ input::placeholder{
         aspect-ratio: 1/1;
     }
 
+    #dashboard .hourly-forecast .hourly .hour .h-temp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .h-temp p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: .1rem;
+    }
+
+    .h-temp span{
+        color:#000956;
+    }
+
+    /* styling the 10 day forecast tab */
+
     #dashboard .day-forecast{
         grid-column: 1/9;
-        grid-row: 3/4;
+        grid-row: 4/5;
+        justify-self: center;
+        
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
 
         background:#9baca760;
         border-radius: 1rem;
         padding: var(--Container-padding);
         box-shadow: .04rem .04rem .3rem .1rem rgba(160, 160, 160, 0.473);
+        width: 100%;
+        max-width: 28rem;
+    }
+
+    #dashboard .day-forecast .days{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: .8rem;
+    }
+
+    #dashboard .day-forecast .days .day{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: .8rem;
+
+        background: #d9d9d98a;
+        border-radius: 1rem;
+        width: 100%;
+        padding: .6rem 1.4rem;
+    }
+
+    #dashboard .day-forecast .days .day .descri{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #dashboard .day-forecast .days .day .descri .day-icon{
+        display: flex;
+        align-items: flex-start;
+        column-gap: .4rem;
+    }
+
+    #dashboard .day-forecast .days .day .descri .day-icon img{
+        max-width: 3.2rem;
+        aspect-ratio: 1/1;
+    }
+
+    #dashboard .day-forecast .days .day .descri .day-icon p{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: -.4rem;
+    }
+
+    #dashboard .day-forecast .days .day .descri h4{
+        color: var(--Accent-Dark-Blue);
     }
 
 
@@ -650,6 +768,7 @@ input::placeholder{
             /*=-FONT Size-=*/
             --Extra-small: 14;
             --Extra-small-thought’s: 16;
+            --Extra-small-accent: 13;
             --H1-sub: 18;
             --H2-sub: 14;
             --Search-bar: 14;
@@ -674,6 +793,10 @@ input::placeholder{
                 
         }
 
+    /*##################################\
+                #Body
+    \##################################*/
+    body{grid-template-rows: 10.8925rem auto auto;}
     /*##################################\
                 #Navigation
     \##################################*/
@@ -753,12 +876,33 @@ input::placeholder{
     #dashboard{
         grid-column: 5/13;
         grid-row: 1/3;
+
+        width: 100%;
     }
 
-    #dashboard .current-weather{padding-inline: 2rem;}
+    #dashboard .current-weather{
+        grid-column: 1/9;
+        grid-row: 1/2;
+
+        padding-inline: 2rem;
+        max-width: none;
+    }
+
+    #dashboard .current-weather .weather-condition{max-width: 38rem;}
 
     #dashboard .hourly-forecast{display: none;}
 
+    #dashboard .day-forecast{
+        grid-column: 1/5;
+        grid-row: 3/4;
+
+        max-width: none;
+        aspect-ratio: 1/1;
+        overflow-y: scroll;
+    }
+
+    /* undisplay the how  controller*/
+    #dashboard  .show-sitting{display: none;}
     
 
     /*##################################\
@@ -769,6 +913,7 @@ input::placeholder{
         grid-column: 1/5;
         grid-row: 2/3;
         justify-content: center;
+        align-items: flex-start;
         
         /* max-width: 20rem; */
         width: 100%;
@@ -859,6 +1004,7 @@ input::placeholder{
     \##################################*/
     body{
         grid-template-columns: 3.4rem 3.4rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 6rem 6rem;
+        grid-template-rows: auto;
     }
 
 
@@ -1004,6 +1150,7 @@ input::placeholder{
     #dashboard .current-weather{
         grid-column: 1/5;
         grid-row: 1/2;
+
     }
 
     #dashboard .day-forecast{grid-row: 2/3;}
@@ -1111,10 +1258,6 @@ input::placeholder{
         text-align: center;
     }
 
-    .icons-link li a:hover p{
-        display: block;
-    }
-
     .icons-link li a img,
     .icons-link li a i{
         width: 1.5rem;
@@ -1123,8 +1266,5 @@ input::placeholder{
 
     .icons-link li a i{color: var(--Icons-Dark-Gray);}
 
-    .icons-link li a p{
-        display: none;
-    }
 
 }
