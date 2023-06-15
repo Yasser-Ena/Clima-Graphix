@@ -1,3 +1,4 @@
+
 /**
  * NAVBAR
  */
@@ -8,7 +9,8 @@ const menuLines     = document.querySelectorAll('.line');
 const mobTabLinks   = document.querySelector('.mob-tab-links');
 const nav           = document.querySelector('nav');
 const section       = document.querySelector('section');
-const sideBar        = document.querySelector('#sidebar');
+const sideBar       = document.querySelector('#sidebar');
+const searchBar = document.querySelector('.search-bar');
 
 
 // toggler function
@@ -22,14 +24,35 @@ function togglerFunction(){
         menu.classList.remove('toggle');
         mobTabLinks.style.display = "none";
 
-    }else{
+
+    }else {
         menu.classList.add('toggle');
         mobTabLinks.style.display = "flex";
-    }
-}
 
-// add the event listener to the menu icon
-menu.addEventListener("click", togglerFunction);
+        // const windowWidth1 = window.matchMedia('(min-width: 52.125rem');
+
+        // Remove the menu and put everything to the default phase after certain amount of time
+            const rimove = ()=> {
+                for (let j = 0; j < menuLines.length; j++) {
+                    menuLines[j].classList.remove('toggle');     
+                }
+                menu.classList.remove('toggle');
+                
+                mobTabLinks.style.display = "none";
+            
+            };
+
+            //Remove the menu unless the mouse it leave's mobTabLinks 
+            mobTabLinks.addEventListener("mouseleave", setTimeout(rimove, 15000));
+
+            
+    }
+        
+}
+    
+    // add the event listener to the menu icon
+    menu.addEventListener("click", togglerFunction);
+    
 
 // remove the menu links if the user click any wer outside the menu links it's self
 function removeTheLinks(){
@@ -47,21 +70,31 @@ function removeTheLinks(){
     item.addEventListener('click', removeTheLinks);
 });
 
+// Call remove the links function that exist in the MENU section for Close the menu links when the user click some were in the body items
+
+[section, sideBar, searchBar].forEach(item => {
+    item.addEventListener('click', removeTheLinks);
+});
+
+
 /**
  * MENU
  */
 
 // Element variables
+const body         = document.querySelector('body');
 const icons        = document.querySelector('.icons');
 const iconsItem    = document.querySelector('.icons-item');
 const notification = document.querySelector('.notification');
 const customize    = document.querySelector('.customize');
 const iconLinks    = document.querySelector('.icons-link');
 const links        = document.querySelector('.links');
-const body         = document.querySelector('body');
+const navLastEl    = nav.lastElementChild;
+const icons2       = document.querySelector('#icons2');
 
 // Variables
 const windowWidth = window.matchMedia('(min-width: 75rem');
+const icons1 = document.createElement('div');
 
 // Break the icons div to multiple element
 function breakDiv(){
@@ -87,55 +120,89 @@ function breakDiv(){
 window.addEventListener('load', breakDiv);
 
 
-// to fix the menu issue when the screen is resized
-function reload(){
-    if(window.innerWidth >= 1200 && nav.querySelector('.icons ') !== null){
+/**
+ * SEARCH BAR
+ */
 
-        [menu, iconsItem].forEach(item=> {
-            icons.parentNode.appendChild(item);
-            // icons1.parentNode.appendChild(item);
-            item.style.display = "flex";
-        });
+// Element Variables
+const inputContainer = document.querySelector('.search-bar');
+const searchBarInput = document.querySelector('#search-bar');
+const searchBarImg   = inputContainer.querySelector("img");
 
-        icons.remove();
-        // icons1.remove();
-        
-        body.appendChild(iconLinks);
+// Change the outline color of the search bar container depend if it's focused or not
+searchBarInput.addEventListener("focus", ()=> {
+    inputContainer.style.borderColor = "#000956";
+    searchBarImg.src ="/images/icons/VectorBlue.svg";
+});
 
-    }else if(window.innerWidth < 1200 && nav.querySelector('.icons ') == null){
-        const icons1 = document.createElement('div');
-        icons1.classList.add('icons');
-        nav.appendChild(icons1);
-        console.log(icons1);
-
-        [menu, iconsItem].forEach(item=> {
-            icons1.appendChild(item);
-            item.style.display = "flex";
-        });
+searchBarInput.addEventListener("blur", ()=> {
+    inputContainer.style.borderColor = "#ededed";
+    searchBarImg.src ="/images/icons/Vector.svg";
     
-        
-        mobTabLinks.appendChild(iconLinks);
-    }
-}
-// Call breakDivDepend function when the page is loaded
-window.addEventListener('resize', reload);
+});
 
 /**
  * MENU LINK's
  */
 
-// Element Variables
-const searchBar = document.querySelector('.search-bar');
+//Element Variables
+const link7        = iconLinks.querySelector('li:nth-child(7)');
+const link8        = iconLinks.querySelector('li:nth-child(8)');
+const link9        = iconLinks.querySelector('li:nth-child(9)');
+const link10        = iconLinks.querySelector('li:nth-child(10)');
+const link7Icon    = link7.querySelector('img');
 
-// Call remove the links function that eexist in the MENU section for Close the menu links when the user click some were in the body items
+// Variables
+const moreLinks     = document.createElement('li');
+// moreLinks.setAttribute('class', 'link');
 
-[section, sideBar, searchBar].forEach(item => {
-    item.addEventListener('click', removeTheLinks);
-});
+// Display the hidden links 
+function showHidLinks(){
+    link7Icon.src = "/images/icons/Up-menu.svg";
 
+    iconLinks.classList.add('link-hovered');
+
+
+    [link8, link9, link10].forEach((item)=> {
+        moreLinks.appendChild(item);
+        item.style.display = 'block';
+    });
+    
+    moreLinks.style.display = 'flex';
+    moreLinks.style.flexDirection = 'column';
+    moreLinks.style.alignItems = 'center';
+    moreLinks.style.rowGap = '1rem';
+    link7Icon.style.marginBottom = '.4rem';
+
+    link7.after(moreLinks);
+
+    link7.addEventListener("mouseleave", ()=> {
+        setTimeout(hidShowedLinks, 20000);
+    });
+
+};
+
+// Undisplay the hidden links 
+function hidShowedLinks(){
+    link7Icon.src = "/images/icons/down-menu.svg";
+
+    iconLinks.classList.remove('link-hovered');
+
+    [link8, link9, link10].forEach((item)=> {
+        moreLinks.after(item);
+        item.style.display = 'none';
+    });
+    
+    moreLinks.remove();
+};
+
+// Run showhidlinks function when link7 seven is hovered and When it's unhovered run hidShowedLinks function
+link7.addEventListener("mouseover", showHidLinks);
+
+moreLinks.addEventListener("mouseleave", hidShowedLinks);
 
 /**
- * SHOW LESS/MORE
+ * DASHBOARD/SHOW LESS/MORE
  */
 
 //Element Variables
@@ -176,7 +243,7 @@ function controlCurrentt(){
 }
 
 // call the controlCurrentT function when the show is clicked
-show.addEventListener('click', controlCurrentT);
+showP.addEventListener('click', controlCurrentT);
 currentWeather.addEventListener('click', controlCurrentt);
 
 /**
