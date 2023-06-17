@@ -1,16 +1,14 @@
-# Welcome to ClimaGraphix weather web app
+# Welcome to *ClimaGraphix* weather web app
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
+- [App and team information](#App-and-team-information)
 - [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [Built with / Project technical specification](#built-with/Project-technical-specification)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -43,8 +41,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Code URL: [Github repository URL](https://github.com/Yasser-Ena/ClimaGraphix)
+- Live Site URL: [Live Site URL](https://inquisitive-salamander-3892b1.netlify.app/)
 
 ## App and team information
 - App Name                   : ClimaGraphix
@@ -58,40 +56,16 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built with / Project technical specification
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- This project is builded using pure HTML CSS JS.
+- Semantic HTML5 markup:
+  > I did use nav element to contain's the navigation, section element to contain the main content and the footer element to conation the footer content.
+- CSS custom properties and media queries:
+  >I did use tow media queries to change the style of the HTML element depends of the screen width, the first one is in 52.125rem **Large tablets**, and the second one is in 75rem **Laptop & Desktop**.
+- Interactive and functional using Vanilla JS:
+  >I did use JS for tow raisons, the first one is to make the page interactive with user like **Toggling a menu ect...**, the second raison is that's it helps also to do things that I can't do using just css or html like **In the navigation, to bork a div to extract tow items the menu icon, customize tab. because I did use the same grid template columns `12column` in desktop version of this web app, and I want to align the menu icon wight sidebar by reposition both of them in the last to columns, and give the same margin right to customize tab as the padding in dashboard section**
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- [Font](https://fonts.google.com/specimen/Nunito) - Google fonts
+- [Icons](https://fontawesome.com) - Fontawesome
 
 ### Continued development
 
@@ -99,12 +73,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
