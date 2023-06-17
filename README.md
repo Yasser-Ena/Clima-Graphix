@@ -1,4 +1,6 @@
-# Welcome to *ClimaGraphix* weather web app
+# Weather Web App
+
+Welcome to *ClimaGraphix* weather web app documentation
 
 ## Table of contents
 
@@ -10,7 +12,6 @@
   - [Built with / Project technical specification](#built-with/Project-technical-specification)
   - [Continued development](#continued-development)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -62,7 +63,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties and media queries:
   >I did use tow media queries to change the style of the HTML element depends of the screen width, the first one is in 52.125rem **Large tablets**, and the second one is in 75rem **Laptop & Desktop**.
 - Interactive and functional using Vanilla JS:
-  >I did use JS for tow raisons, the first one is to make the page interactive with user like **Toggling a menu ect...**, the second raison is that's it helps also to do things that I can't do using just css or html like **In the navigation, to bork a div to extract tow items the menu icon, customize tab. because I did use the same grid template columns `12column` in desktop version of this web app, and I want to align the menu icon wight sidebar by reposition both of them in the last to columns, and give the same margin right to customize tab as the padding in dashboard section**
+  >I did JavaScript for two main purposes. Firstly, it was employed to create interactivity between the user and the page, enabling features such as menu toggling and other interactive elements. Secondly, JavaScript was instrumental in accomplishing tasks that couldn't be achieved solely with CSS or HTML. For instance, in the navigation section, JavaScript was employed to manipulate the layout by breaking a div into two items: the menu icon and the customize tab. This was necessary because both the nav element and body employed the same grid template columns, '12column,' in the desktop version of the web app. To align the menu icon with the sidebar, both elements had to be repositioned within the last two columns, and the customize tab required a margin right that matched the padding in the dashboard section. JavaScript provided the flexibility and control needed to achieve these layout adjustments seamlessly.
 - Mobile-first workflow
 - [Font](https://fonts.google.com/specimen/Nunito) - Google fonts
 - [Icons](https://fontawesome.com) - Fontawesome
@@ -74,16 +75,16 @@ Use this section to outline areas that you want to continue focusing on in futur
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 
+## Installation
+
+### To get started with the Weather Web App, follow these steps:
+
+1. Clone the repository: Start by cloning the project repository to your local machine using the following command:
+`git clone https://github.com/Yasser-Ena/ClimaGraphix.git`
+
+
+
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Yasser Elanaya Portfolio](https://648d94afdeb93b719786d9d7--nimble-tarsier-f34414.netlify.app/)
+- GitHub - [Yasser-Ena](https://github.com/Yasser-Ena)
