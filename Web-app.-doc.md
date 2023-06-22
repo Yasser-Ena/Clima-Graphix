@@ -71,7 +71,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Third party API:
   >I did use three API's, one for getting the user geolocation coordinates automatically, second one for revers the location that the user type in the search bar from string to `latitude` and `longitude`, and third one for getting the weather map.
-  [Link to how did it](./README-map-Open.md).
+  [Link to how did it](./Used-api's.md).
 
 - [Font](https://fonts.google.com/specimen/Nunito) - Google fonts
 
