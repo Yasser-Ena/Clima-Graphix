@@ -60,12 +60,21 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - This project is builded using pure HTML CSS JS.
 - Semantic HTML5 markup:
   > I did use nav element to contain's the navigation, section element to contain the main content and the footer element to conation the footer content.
+
 - CSS custom properties and media queries:
   >I did use tow media queries to change the style of the HTML element depends of the screen width, the first one is in 52.125rem **Large tablets**, and the second one is in 75rem **Laptop & Desktop**.
-- Interactive and functional using Vanilla JS:
-  >I did JavaScript for two main purposes. Firstly, it was employed to create interactivity between the user and the page, enabling features such as menu toggling and other interactive elements. Secondly, JavaScript was instrumental in accomplishing tasks that couldn't be achieved solely with CSS or HTML. For instance, in the navigation section, JavaScript was employed to manipulate the layout by breaking a div into two items: the menu icon and the customize tab. This was necessary because both the nav element and body employed the same grid template columns, '12column,' in the desktop version of the web app. To align the menu icon with the sidebar, both elements had to be repositioned within the last two columns, and the customize tab required a margin right that matched the padding in the dashboard section. JavaScript provided the flexibility and control needed to achieve these layout adjustments seamlessly.
+
 - Mobile-first workflow
+
+- Interactive and functional using Vanilla JS:
+  >I did use JavaScript for two main purposes. Firstly, it was employed to create interactivity between the user and the page, enabling features such as menu toggling and other interactive elements. Secondly, JavaScript was instrumental in accomplishing tasks that couldn't be achieved solely with CSS or HTML. For instance, in the navigation section, JavaScript was employed to manipulate the layout by breaking a div into two items: the menu icon and the customize tab. This was necessary because both the nav element and body employed the same grid template columns, '12column,' in the desktop version of the web app. To align the menu icon with the sidebar, both elements had to be repositioned within the last two columns, and the customize tab required a margin right that matched the padding in the dashboard section. JavaScript provided the flexibility and control needed to achieve these layout adjustments seamlessly.
+
+- Third party API:
+  >I did use three API's, one for getting the user geolocation coordinates automatically, second one for revers the location that the user type in the search bar from string to `latitude` and `longitude`, and third one for getting the weather map.
+  [Link to how did it](./README-map-Open.md).
+
 - [Font](https://fonts.google.com/specimen/Nunito) - Google fonts
+
 - [Icons](https://fontawesome.com) - Fontawesome
 
 ### Continued development

@@ -389,7 +389,8 @@ nav .search-bar {
     border: var(--Font-Light-Gray) .12rem solid;
     border-radius: 25rem;
     padding: .2rem .5rem;
-    box-shadow: .1rem .2rem rgba(121, 119, 119, 0.432);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.134);
+
 
 }
 
@@ -397,10 +398,9 @@ nav .search-bar input {
     border-radius: 20rem;
     outline: none;
     width: 100%;
+    padding-inline: .3rem;
     color: var(--Font-Light-Gray);
 }
-
-
 
 nav .search-bar input::placeholder {
     color: var(--Font-Light-Gray-placeholder);

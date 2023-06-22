@@ -37,18 +37,19 @@
      <!-- 
         -Link Openweathermap map
       -->
-      <link rel="stylesheet" type="text/css" href="./openweathermap/map/leaflet/leaflet.css" />
-      <!-- <link rel="stylesheet" type="text/css" href="./openweathermap/leaflet-openweathermap.css" /> -->
-      <link rel="stylesheet" type="text/css" href="./openweathermap/map/files/map.css" />
-      <script src="./openweathermap/map/leaflet/leaflet.js"></script>
-      <script src="./openweathermap/map/leaflet/Permalink.js"></script>
-      <script src="./openweathermap/map/leaflet/Permalink.Layer.js"></script>
-      <script src="./openweathermap/map/leaflet/Permalink.Overlay.js"></script>
-      <script src="./openweathermap/leaflet-openweathermap.js"></script>
-      <link rel="stylesheet" type="text/css" href="./openweathermap/map/leaflet/leaflet-languageselector.css" />
-      <script src="./openweathermap/map/leaflet/leaflet-languageselector.js"></script>
-      <script src="./openweathermap/map/files/map_i18n.js"></script>
-      <script src="./openweathermap/map/files/map.js"></script>
+    <!-- 
+        --Leaflet Map Provider and leaflet
+     -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-openweathermap/leaflet-openweathermap.css" />
+    <script src="./js/leaflet-openweathermap.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- 
+        -Link the map style
+     -->
+     <link rel="stylesheet" href="./CSS/map.css">
+
 
 </head>
 <body>
@@ -64,7 +65,7 @@
                 
                 <div class="icons-item">
                     <div class="notification">
-                        <img src="/images/icons/Notification bell.svg" alt="Notification">
+                        <img src="/images/icons/Notification bell.svg" alt="Notification" class="notification">
                     </div>
                     <div class="user">
                         <img src="/images/icons/User1.svg">
@@ -238,8 +239,8 @@
             </div>
 
             <form class="search-bar">
-                <input type="search" name="search" id="search-bar" placeholder="Location/Zip code,day">
-                <img src="/images/icons/Vector.svg" alt="">
+                <input type="text" name="search" id="search-bar" placeholder="Location/Zip code,day">
+                <img src="/images/icons/Vector.svg" class="search-icon">
             </form>
     </nav>
 
@@ -734,7 +735,7 @@
         </div>
 
         <div class="map-container">
-            <div id="map"></div>
+            <div id="map" class="map1"></div>
         </div>
 
         <div class="chart-container"></div>
@@ -792,15 +793,16 @@
 <!-- 
     -Link the script file
  -->
- <script src="./js/home.js"></script>
-
-<!-- 
-    -Map script
- -->
- <script>
-    initMap();
- </script>
+ <script type="module" src="./js/home.js"></script>
  
+<!-- 
+    -Link map script
+-->
+<script type="module" src="./js/map.js"></script>
+<!-- 
+    -Link Location script
+-->
+<script type="module" src="./js/location.js"></script>
 
 </body>
 </html>
