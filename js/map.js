@@ -1,4 +1,5 @@
-const APELink = `https://api.bigdatacloud.net/data/reverse-geocode-client`;
+// const APELink = `https://api.bigdatacloud.net/data/reverse-geocode-client`;
+const APELink = `https://api-bdc.net/data/timezone-by-location`;
 const apiKey  = 'f49da6184d17e928327752946fb0ee6d';
 let lat = 0;
 let lon = 0;
